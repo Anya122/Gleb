@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <title>Site Gleba</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <header>
+         
+          <img src="./images/logo2.png" alt="" class="logo" />
+        </header>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="nav">
+        <button class="btn"><a href="#about" class="links">Главная</a></button>
+        <button class="btn"><a href="#tovar" class="links">Товары</a></button>
+        <button class="btn"><a href="#contact" class="links">Контакты</a></button>
+      </nav>
+
+      <main></main>
+      <h1 class="name">IV-soft </h1>
+      <section class="about_shop" id="about">
+        <img src="./images/mashenka/gleb.png" alt="" class="cat" />
+        <div class="about">
+          <p class="cat_p">
+            IV-Soft — это IT-компания, которая занимается разработкой программного 
+            обеспечения для различных отраслей бизнеса.
+          </p>
+          <p class="cat_p">
+             
+            <span class="bold">Мы супер компания без фантазии на название</span>
+          </p>
+
+          <p class="cat2_p">
+            Руководитель компании в душе будущий депутат
+          </p>
+
+        </div>
+      </section>
+
+      <section class="tovar" id = "tovar">
+
+        <div class = "products">
+          Раньше мы занимались только gRPC
+          <h3 class="plus">Категории продуктов сейчас:</h3>
+          <ul >
+            <li class="list">Машенька</li>
+            <li class="list">Машенька</li>
+            <li class="list">Машенька </li>
+            <li class="list">Машенька</li>
+            <li class="list">Машенька</li>
+            <li class="list">Машенька</li>
+            <li class="list">Машенька <a href="https://cattish.ru/breed/" target="_blank" class="d_link"></a></li>
+          </ul>
+        </div>
+        
+
+        <img src="./images/mashenka/gleb2.jpg" alt="" class="cat2">
+
+      </section>
+
+
+      <div class="myProducts">
+        <h3 class="photos">Посвещаю всё в своей компании этой прекрасной даме:</h3>
+        <div class="myProducts-gallery">
+            <img src="./images/mashenka/1.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/2.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/3.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/4.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/5.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/6.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/7.jpg" alt="click here" onclick="myImageFunction(this)">
+            <img src="./images/mashenka/8.jpg" alt="click here" onclick="myImageFunction(this)">
+        </div>
+  
+        <div class="image-container">
+            <img id="img-Box" src="./images/mashenka/1.jpg" alt="click here">
+        </div>
+      </div>
+
+        
+
+        <div class="contact">
+          <h2 class="contacth2" id = "contact">Наши контакты:</h2>
+          <p class="contact_p">Email: mashenkalover@yandex.ru</p>
+          <p class="contact_p">Телефон:+ 7 (812) 026 4389</p>
+          <img src="./images/mashenka/gleb3.jpg" alt="" class="contact_img">
+        </div>
+  
+        <div class="up_btn" onClick="scrollTopTop()"></div>
+  
+        <footer class="footer">
+          <span class="foot_name">Anya production 2023</span>
+        </footer>
+      
+    </div>
+
+    <script>
+      function myImageFunction(productSmallImg) {
+          var productFullImg = document.getElementById("img-Box");
+          productFullImg.src = productSmallImg.src;
+      }
+
+      window.addEventListener('scroll', function (){
+        let scroll = document.querySelector('.up_btn');
+        scroll.classList.toggle("active", window.scrollY>5)
+      })
+
+      function scrollTopTop() {
+        window.scrollTo( {
+        top:0,
+        behavior: 'smooth'
+      })
+      }
+  </script>
+  </body>
+</html>   
